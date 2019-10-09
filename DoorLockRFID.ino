@@ -16,7 +16,6 @@
 #include <WiFiClient.h>
 #include <ESP8266WebServer.h>
 #include <ESP8266HTTPClient.h>
-//#include <PubSubClient.h>
 
 #define RST_PIN 20 // RST-PIN for RC522 - RFID - SPI - Module GPIO15 
 #define SS_PIN  2  // SDA-PIN for RC522 - RFID - SPI - Module GPIO2
