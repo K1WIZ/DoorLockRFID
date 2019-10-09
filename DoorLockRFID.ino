@@ -30,12 +30,12 @@ MFRC522 mfrc522(SS_PIN, RST_PIN);   // Create MFRC522 instance
 SSD1306  display(0x3c, 4, 5);
 
 // Wireless name and password
-const char* ssid        = "MIND CONTROL BG";               // replace with your wireless network name
-const char* password    = "N1wilK1wiz";               // replace with your wireless network password
+const char* ssid        = "";               // replace with your wireless network name
+const char* password    = "";               // replace with your wireless network password
 
 // Remote Host running fobcheck
-String host = "10.50.150.20";
-String url = "/check/fobcheck.php";
+String host = "";
+String url = "";
 
 String tag= "";  // Card read tag declaration
 int time_buffer = 5000; // amount of time in miliseconds that the relay will remain open
