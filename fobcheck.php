@@ -1,3 +1,10 @@
+/*
+Dependencies: mosquitto-client, MySQL, PHP
+Written By: John Rogers
+License: GPL
+Contact: john at wizworks dot net
+*/
+
 <?php
 
 $search = $_POST['search'];
