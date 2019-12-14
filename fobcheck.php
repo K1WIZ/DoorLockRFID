@@ -3,11 +3,10 @@ Dependencies: mosquitto-client, MySQL, PHP
 Written By: John Rogers
 License: GPL
 Contact: john at wizworks dot net
+Review: 14. Dec. 2019 - (martinius96)
 */
 
 <?php
-
-$search = $_POST['search'];
 // DB Credentials
 $servername = "127.0.0.1";
 $username = "";
@@ -27,6 +26,8 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+$search = mysqli_real_escape_string($conn, $_POST['search']);
+$search = trim( $search );
 
 $q1    = "SELECT active FROM tags WHERE tag = '$search' LIMIT 1;";
 $result = mysqli_query($conn, $q1);
